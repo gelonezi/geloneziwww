@@ -1,0 +1,9 @@
+// Cloudflare Workers static assets: the folder is the site, no build step and no Worker code.
+// Files that must not be published are listed in .assetsignore.
+{
+  "name": "geloneziwww",
+  "compatibility_date": "2026-10-01",
+  "assets": {
+    "directory": "."
+  }
+}

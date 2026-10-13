@@ -1,0 +1,11 @@
+# Not part of the site: repository, tooling and notes stay out of https://gelonezi.com
+.git
+.gitignore
+.assetsignore
+.claude
+.wrangler
+node_modules
+CLAUDE.md
+README.md
+docs
+wrangler.jsonc
