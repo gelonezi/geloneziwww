@@ -33,7 +33,7 @@ document.addEventListener("keydown", (e) => { if (e.key === "Escape") setMenu(fa
 
 // ---------- Active section in the nav ----------
 const navLinks = new Map(
-  [...navList.querySelectorAll("a")].map((a) => [a.getAttribute("href").slice(1), a])
+  [...navList.querySelectorAll('a[href^="#"]')].map((a) => [a.getAttribute("href").slice(1), a])
 );
 const sectionObserver = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
@@ -42,11 +42,8 @@ const sectionObserver = new IntersectionObserver((entries) => {
     navLinks.get(entry.target.id)?.classList.add("active");
   });
 }, { rootMargin: "-45% 0px -50% 0px" });
-// The hero and contact have no nav link; observing them clears the highlight there.
-["top", ...navLinks.keys(), "contact"].forEach((id) => {
-  const el = document.getElementById(id);
-  if (el) sectionObserver.observe(el);
-});
+// Every section is observed; ones without a nav link simply clear the highlight.
+document.querySelectorAll("main > section[id]").forEach((el) => sectionObserver.observe(el));
 
 // ---------- Reveal on scroll ----------
 const revealEls = document.querySelectorAll(".reveal");

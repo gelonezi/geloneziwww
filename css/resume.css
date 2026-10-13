@@ -1,0 +1,73 @@
+/* Résumé: one column, light, print-first. Plain structure so ATS parsers read it in order. */
+:root {
+  --text: #111827;
+  --muted: #4b5563;
+  --line: #d6dde8;
+  --accent: #0b66c3;
+  --sans: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, Consolas, monospace;
+  color-scheme: light;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: #eef2f7;
+  color: var(--text);
+  font: 400 1rem/1.55 var(--sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--accent); text-underline-offset: 2px; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 3px; }
+
+.toolbar {
+  display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap;
+  max-width: 860px; margin: 0 auto; padding: 16px;
+  font: 500 0.85rem/1 var(--mono);
+}
+.toolbar a { text-decoration: none; }
+.toolbar a:hover { text-decoration: underline; }
+.toolbar button {
+  min-height: 40px; padding: 0 16px; border: 0; border-radius: 6px;
+  background: var(--accent); color: #fff; font: inherit; cursor: pointer;
+}
+
+.resume {
+  max-width: 860px; margin: 0 auto 48px; padding: 48px 56px;
+  background: #fff; border: 1px solid var(--line); border-radius: 8px;
+}
+
+.resume-head h1 { margin: 0; font-size: 2.1rem; line-height: 1.1; letter-spacing: -0.02em; }
+.headline { margin: 8px 0 0; font-size: 1.15rem; font-weight: 600; }
+.meta { margin: 6px 0 0; color: var(--muted); font-size: 0.95rem; }
+
+h2 {
+  margin: 30px 0 12px; padding-bottom: 6px; border-bottom: 2px solid var(--accent);
+  font: 600 0.82rem/1.2 var(--mono); letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent);
+}
+h3 { margin: 20px 0 0; font-size: 1.1rem; }
+h4 { margin: 12px 0 0; font-size: 1rem; font-weight: 600; }
+.job h3 + h4 { margin-top: 2px; }
+.job-meta { margin: 2px 0 0; color: var(--muted); font-size: 0.9rem; }
+p { margin: 0; }
+ul { margin: 8px 0 0; padding-left: 20px; }
+li + li { margin-top: 4px; }
+.skills { list-style: none; padding-left: 0; }
+
+@media (max-width: 640px) {
+  .resume { padding: 28px 18px; border-radius: 0; border-left: 0; border-right: 0; }
+  .resume-head h1 { font-size: 1.75rem; }
+}
+
+@media print {
+  @page { margin: 14mm 14mm 16mm; }
+  body { background: #fff; font-size: 10.5pt; }
+  .toolbar { display: none; }
+  .resume { max-width: none; margin: 0; padding: 0; border: 0; }
+  h2 { margin-top: 18px; break-after: avoid; }
+  h3, h4 { break-after: avoid; }
+  li { break-inside: avoid; }
+  a { color: var(--text); text-decoration: none; }
+}
