@@ -16,7 +16,8 @@ css/resume.css             Résumé styles (light, print-first)
 js/main.js                 Theme toggle, mobile menu, active nav, reveal-on-scroll,
                            click-to-load YouTube player, interactive architecture diagram
 assets/favicon.svg
-assets/img/                roger-gelonezi.jpg (portrait), intro-poster.jpg, og-image.png (1200×630)
+assets/img/                roger-gelonezi.jpg (portrait = GitHub avatar, 460×460), intro-poster.jpg,
+                           og-image.png (1200×630)
 robots.txt, sitemap.xml    SEO
 wrangler.jsonc             Cloudflare Workers static assets (the folder is the site)
 .assetsignore              Files kept off the live site (repo tooling, notes, docs/)
