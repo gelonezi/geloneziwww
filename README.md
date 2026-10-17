@@ -48,3 +48,7 @@ python -m http.server 8000
 
 Cloudflare deploys `main` automatically: `wrangler.jsonc` publishes the repository folder as static assets, minus
 everything listed in `.assetsignore`. There is no build command.
+
+Cloudflare serves clean URLs: `/resume.html` redirects (307) to `/resume`, and `/index.html` to `/`. In-page links keep
+the `.html` form so the local Python server still works; canonical URLs, `og:url` and `sitemap.xml` must use the clean
+form (`https://gelonezi.com/resume`).
