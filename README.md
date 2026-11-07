@@ -25,7 +25,6 @@ assets/img/                roger-gelonezi.jpg (portrait = GitHub avatar, 460×46
                            og-image.png (1200×630)
 robots.txt, sitemap.xml    SEO (sitemap has no lastmod on purpose: nothing to keep in sync)
 _headers                   Security headers and asset caching; CSP ships as Report-Only first
-_redirects                 www.gelonezi.com → gelonezi.com (301)
 wrangler.jsonc             Cloudflare Workers static assets (the folder is the site)
 .assetsignore              Files kept off the live site (repo tooling, notes, docs/, .temp/)
 .gitattributes             LF line endings for text files, so diffs don't depend on core.autocrlf

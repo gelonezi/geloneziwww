@@ -79,8 +79,7 @@ legacy modernization, production engineering, technical leadership, and applied 
   dark/light themes, accessibility (skip link, focus states, reduced motion, labelled controls), mobile layout
   (only the diagram may scroll sideways).
 - Static HTML + CSS + vanilla JS only. No frameworks, no build step, no new runtime dependencies.
-- Files that must not be served are listed in `.assetsignore`. `_headers` and `_redirects` are served by Cloudflare
-  as configuration, not as pages; `404.html` is the not-found page (`not_found_handling` in `wrangler.jsonc`).
+- Files that must not be served are listed in `.assetsignore`. `_headers` is consumed by Cloudflare as configuration, never served; a www→apex redirect must be a Cloudflare Redirect Rule (Workers static assets rejects host-based `_redirects` rules); `404.html` is the not-found page (`not_found_handling` in `wrangler.jsonc`).
 - `js/theme.js` must stay a blocking `<script src>` before the stylesheet: it is the theme bootstrap and the reason
   the CSP needs no inline-script hashes. Never move it back inline.
 - `.temp/` holds private context exported from other AI chat sessions (it contains his phone, email, salary figures and
