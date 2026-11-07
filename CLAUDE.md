@@ -35,7 +35,7 @@ legacy modernization, production engineering, technical leadership, and applied 
   FIAP student ID (RM). Education is text only.
 - Never publish or quote the Experian/SOVA personality assessment.
 - Keep client details generalized (e.g. "a public prosecutor's office"). The judiciary diagram is the generalized version
-  already public in github.com/gelonezi/system-design-practices. No proprietary code.
+  already public in github.com/gelonezi/system-design-exercises. No proprietary code.
 - **Do not invent metrics, technologies, certifications or experience.** Every number on the site comes from his resume
   or from Roger directly. Don't claim Azure/GCP depth, ECS, SNS, blue/green deployments or migration ownership beyond
   what's already stated. When unsure, use conservative wording.
@@ -52,3 +52,6 @@ legacy modernization, production engineering, technical leadership, and applied 
   (only the diagram may scroll sideways).
 - Static HTML + CSS + vanilla JS only. No frameworks, no build step, no new runtime dependencies.
 - Files that must not be served are listed in `.assetsignore`.
+- `.temp/` holds private context exported from other AI chat sessions (it contains his phone, email, salary figures and
+  other companies' names). It is git-ignored and asset-ignored and is **never a publishable source**: anything in it
+  that isn't in his résumé needs Roger's explicit confirmation before it goes on the site.
