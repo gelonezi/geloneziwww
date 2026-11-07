@@ -23,13 +23,19 @@ themeBtn.addEventListener("click", () => {
 const navToggle = document.querySelector(".nav-toggle");
 const navList = document.getElementById("nav-list");
 const setMenu = (open) => {
+  const wasOpen = navList.classList.contains("open");
   navList.classList.toggle("open", open);
   navToggle.setAttribute("aria-expanded", String(open));
   navToggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+  // Closing with the keyboard from inside the menu: give focus back to the button.
+  if (!open && wasOpen && navList.contains(document.activeElement)) navToggle.focus();
 };
 navToggle.addEventListener("click", () => setMenu(!navList.classList.contains("open")));
 navList.addEventListener("click", (e) => { if (e.target.closest("a")) setMenu(false); });
 document.addEventListener("keydown", (e) => { if (e.key === "Escape") setMenu(false); });
+document.addEventListener("click", (e) => {
+  if (navList.classList.contains("open") && !e.target.closest(".site-header")) setMenu(false);
+});
 
 // ---------- Active section in the nav ----------
 const navLinks = new Map(
@@ -43,7 +49,8 @@ const sectionObserver = new IntersectionObserver((entries) => {
   });
 }, { rootMargin: "-45% 0px -50% 0px" });
 // Every section is observed; ones without a nav link simply clear the highlight.
-document.querySelectorAll("main > section[id]").forEach((el) => sectionObserver.observe(el));
+// #leadership is a block inside the principles section and has its own nav link.
+document.querySelectorAll("main > section[id], #leadership").forEach((el) => sectionObserver.observe(el));
 
 // ---------- Reveal on scroll ----------
 const revealEls = document.querySelectorAll(".reveal");

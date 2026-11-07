@@ -4,15 +4,28 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Roger Gelonezi — Résumé · Senior/Staff Backend Engineer &amp; .NET Software Architect</title>
-  <meta name="description" content="Résumé of Roger Gelonezi: Senior/Staff Backend Engineer and .NET Software Architect. 20+ years in C#/.NET, distributed systems, AWS, legacy modernization and applied AI. Brazil (UTC−3), English C1, remote.">
+  <meta name="description" content="Résumé of Roger Gelonezi, Senior/Staff Backend Engineer and .NET Software Architect. C#/.NET, distributed systems, AWS, legacy modernization. Remote, UTC−3, English C1.">
   <meta name="author" content="Roger Gelonezi">
+  <meta name="theme-color" content="#eef2f7">
   <link rel="canonical" href="https://gelonezi.com/resume">
   <meta property="og:type" content="profile">
+  <meta property="og:site_name" content="Roger Gelonezi">
   <meta property="og:title" content="Roger Gelonezi — Résumé">
   <meta property="og:description" content="Senior/Staff Backend Engineer & .NET Software Architect. C#/.NET, distributed systems, AWS, legacy modernization, applied AI.">
   <meta property="og:url" content="https://gelonezi.com/resume">
   <meta property="og:image" content="https://gelonezi.com/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Roger Gelonezi — Senior/Staff Backend Engineer and .NET Software Architect">
+  <meta property="profile:first_name" content="Roger">
+  <meta property="profile:last_name" content="Gelonezi">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="/favicon.ico" sizes="32x32">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"ProfilePage","url":"https://gelonezi.com/resume","name":"Roger Gelonezi — Résumé","mainEntity":{"@id":"https://gelonezi.com/#person"}}
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=IBM+Plex+Sans:wght@400;600;700&display=swap">
@@ -42,17 +55,23 @@
         Senior/Staff backend engineer and .NET software architect with 20+ years of hands-on experience (coding since 2001).
         I design, modernize, scale and operate distributed backend systems in C#/.NET on AWS: microservices and modular
         monoliths, event-driven integrations, and the observability and CI/CD that keep them safe in production. Led the
-        four-year, zero-incident replacement of a legacy judiciary integration platform with 25+ .NET services processing
+        four-year, zero-incident Strangler Fig replacement of a legacy Delphi monolith with 25+ .NET services processing
         200,000+ requests per day. Mentor and technical lead who works closely with Product, and applies AI (Microsoft Agent
         Framework, production ML, AI-assisted development) where it creates measurable engineering value.
       </p>
+      <p class="sub-label">Selected results</p>
+      <ul>
+        <li>Replaced a legacy platform with 25+ auto-scaling .NET microservices processing 200,000+ requests per day, with zero-incident client cutovers.</li>
+        <li>Technical lead for a public-service platform used by 60,000+ citizens, including the knowledge transfer that let the client's team own it.</li>
+        <li>Raised a production ML classifier from ~40% to 80%+ accuracy while scaling it from 12 to 140+ labels.</li>
+      </ul>
     </section>
 
     <section>
       <h2>Core skills</h2>
       <ul class="skills">
         <li><strong>Backend:</strong> C#, .NET, ASP.NET Core, EF Core, REST APIs, MassTransit</li>
-        <li><strong>Architecture:</strong> distributed systems, microservices, modular monolith, DDD, event-driven architecture, Vertical Slice, Hexagonal, Clean Architecture, CQRS, Saga, RFCs and ADRs</li>
+        <li><strong>Architecture:</strong> distributed systems, microservices, modular monolith, DDD, event-driven architecture, Vertical Slice, Hexagonal, Clean Architecture, CQRS, Saga, Strangler Fig, RFCs and ADRs</li>
         <li><strong>Cloud &amp; platform:</strong> AWS (EKS, S3, DocumentDB, Lambda, RDS, Cognito, API Gateway), Kubernetes, Docker, Helm, Terraform, GitLab CI, GitHub Actions</li>
         <li><strong>Messaging &amp; integration:</strong> RabbitMQ, MassTransit, Kafka, AWS SQS, REST, SOAP</li>
         <li><strong>Data:</strong> SQL Server, PostgreSQL, MySQL, MongoDB, DocumentDB, Redis</li>
@@ -71,16 +90,16 @@
         <h3>Softplan</h3>
         <p class="job-meta">May 2021 – Present · Legal-tech, Brazil</p>
 
-        <h4>Senior Software Engineer — Backend .NET &amp; Architecture</h4>
-        <p class="job-meta">May 2026 – Present · Remote</p>
+        <h4>Senior Software Engineer</h4>
+        <p class="job-meta">May 2026 – Present · Remote · AI-first .NET product, backend &amp; architecture</p>
         <ul>
           <li>Took end-to-end ownership of the C#/.NET backend of an AI-first product; restructured the roadmap with Product into small, parallel workstreams shipped through continuous delivery, code review and automated tests.</li>
           <li>Set engineering standards and architectural direction through RFCs and ADRs, while staying hands-on in development and architecture reviews.</li>
           <li>Building a legal assistant on Microsoft Agent Framework and AG-UI that answers questions, summarizes case files and helps draft legal documents, with human oversight at key decisions.</li>
         </ul>
 
-        <h4>Senior Software Engineer — Machine Learning Product</h4>
-        <p class="job-meta">Jan 2026 – May 2026 · Brazil</p>
+        <h4>Senior Software Engineer</h4>
+        <p class="job-meta">Jan 2026 – May 2026 · Brazil · Machine learning product</p>
         <ul>
           <li>Took over a production ML product for the Brazilian judiciary and raised classification accuracy from ~40% to 80%+, scaling the classifier from 12 to 140+ labels and automating case distribution at a public prosecutor's office.</li>
           <li>Redesigned the C# serving API toward a single multi-tenant, high-confidence model; made training reproducible with MLflow and Qdrant.</li>
@@ -94,8 +113,9 @@
           <li>Integrated ~20 Brazilian judiciary systems over REST and SOAP with real-time synchronization and document storage on AWS S3.</li>
           <li>Cut AWS resource reservations by 40% and eliminated API throttling with an AI-driven routine that tunes Kubernetes autoscaling from Grafana metrics.</li>
           <li>Replaced days of manual validation with automated Robot Framework test gates in the pipeline.</li>
-          <li>Led the four-year replacement of the legacy platform, owning critical client cutovers with zero incidents through final legacy retirement.</li>
+          <li>Led the four-year Strangler Fig replacement of the legacy Delphi monolith, owning critical client cutovers with zero incidents through final legacy retirement.</li>
           <li>Mentored five engineers from intern to senior and led onboarding into a complex distributed-systems environment in a GovTech domain.</li>
+          <li>Progression within the role: maintained the legacy system and extracted its use-case rules into the specifications for the new APIs (2021); technical reference with the architect's responsibilities (not the title), training the developers joining the team (2024); sole owner of the on-premises legacy-replacement strategy, configuring, running overnight and verifying through observability the migrations of a dozen clients, and training the support team that took over maintenance (2025).</li>
         </ul>
       </article>
 
@@ -106,7 +126,7 @@
         <ul>
           <li>Analyzed and planned the modernization of a VB6 and .NET Framework platform (SQL Server) for book publishers and bookstores: mapped ~60 functional areas, their business rules and dependencies, and defined a phased path to C#/.NET Core services and APIs.</li>
           <li>Implemented the first migrated domain (Orders) on .NET Core and guided an intern through validation.</li>
-          <li>Designed and built a React Native self-checkout with a .NET backend and PagSeguro payments for a major São Paulo bookstore, later cited by PagSeguro as a benchmark case.</li>
+          <li>Independently designed and built a React Native self-checkout, mobile app and PagSeguro backend integration, for a major São Paulo bookstore, later cited by PagSeguro as a benchmark case.</li>
         </ul>
       </article>
 
@@ -115,7 +135,7 @@
         <h4>E-commerce Technology &amp; Operations Specialist</h4>
         <p class="job-meta">May 2016 – Sep 2020 · São Paulo, Brazil</p>
         <ul>
-          <li>Owned e-commerce technology end to end: OpenCart launch, Magento migration, payment and shipping integrations (Mercado Pago, Correios) and marketplace integrations (Mercado Livre, Amazon, B2W, Magalu).</li>
+          <li>Owned e-commerce technology end to end: OpenCart launch, the transition to Magento (with an external vendor), payment and shipping integrations (Mercado Pago, Correios) and marketplace integrations (Mercado Livre, Amazon, B2W, Magalu).</li>
           <li>Built the internal reporting application behind purchasing, promotions and pricing decisions; as revenue grew to ~R$1.5M per year, also took on operational leadership, including hiring and managing staff.</li>
         </ul>
       </article>
@@ -161,8 +181,9 @@
     <section>
       <h2>Selected projects</h2>
       <ul>
-        <li><strong>Judiciary integration platform (Softplan)</strong>: one API contract over ~20 Brazilian judiciary systems; 25+ .NET microservices on AWS EKS at 200,000+ requests per day and 99% uptime. Generalized reference architecture: <a href="https://github.com/gelonezi/system-design-exercises">github.com/gelonezi/system-design-exercises</a></li>
+        <li><strong>Judiciary integration platform (Softplan)</strong>: one API contract over ~20 Brazilian judiciary systems; 25+ .NET microservices on AWS EKS at 200,000+ requests per day and 99% uptime. Generalized reference architecture: <a href="https://github.com/gelonezi/system-design-exercises">github.com/gelonezi/system-design-exercises</a> · Board: <a href="https://excalidraw.com/#json=a-eHnApUWQOO8Mw825KjP,vkUMiKu2Mo9H3pV9tt0TKg">Excalidraw</a></li>
         <li><strong>MyMechanicShop</strong>: modular monolith on .NET 10, ABP, EF Core and PostgreSQL; DDD with a database per module. <a href="https://github.com/gelonezi/wip-my-mechanic-shop">github.com/gelonezi/wip-my-mechanic-shop</a></li>
+        <li><strong>vibe-engineering</strong> (early stage): a Claude Code plugin with skills that move work across a GitHub Projects board from idea to merged code; <code>create-board</code> and <code>create-item</code> built, six more planned. <a href="https://github.com/gelonezi/vibe-engineering">github.com/gelonezi/vibe-engineering</a></li>
         <li><strong>Mecânica Hermes (FIAP, team of four)</strong>: distributed mechanic-shop backend with three .NET 10 microservices and a Lambda; RabbitMQ and MassTransit with Saga, transactional Outbox and idempotent consumers; PostgreSQL and MongoDB; Terraform, AWS EKS, RDS, Cognito and API Gateway. <a href="https://github.com/fiap-challenge-13soat/mecanica-hermes-docs/wiki">github.com/fiap-challenge-13soat/mecanica-hermes-docs/wiki</a></li>
       </ul>
     </section>
@@ -170,10 +191,17 @@
     <section>
       <h2>Education</h2>
       <ul>
-        <li><strong>Postgraduate (Lato Sensu), Software Architecture</strong>, FIAP, 2025–2026. 360 hours; average 91.8/100 across 27 modules.</li>
+        <li><strong>Postgraduate (Lato Sensu), Software Architecture</strong>, FIAP, Sep 2025 – Aug 2026. 360 hours; average 91.8/100 across 27 modules.</li>
         <li><strong>B.Sc. Information Technology</strong>, UNIVESP (São Paulo State Virtual University), 2022–2025</li>
         <li><strong>Bachelor's, Business Administration</strong>, ITE (Instituição Toledo de Ensino), 2006–2008</li>
         <li><strong>Technical Diploma, Software Programming</strong>, CTI “Prof. Isaac Portal Roldán”, 2001–2003</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Recognition</h2>
+      <ul>
+        <li><strong>1st place, Ideathon Lençóis Paulista</strong> (October 2026), organized with Sebrae for Startups and ABStartups and the city's SEDECON. Team concept “Cidade em Dia”: a solution concept for a real municipal problem; the prize included consulting support.</li>
       </ul>
     </section>
 
@@ -188,8 +216,6 @@
     </section>
   </main>
 
-  <script>
-    document.querySelector("[data-print]").addEventListener("click", () => window.print());
-  </script>
+  <script src="js/resume.js" defer></script>
 </body>
 </html>

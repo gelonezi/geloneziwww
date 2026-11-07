@@ -136,6 +136,7 @@ strong { font-weight: 600; color: var(--text); }
   border: 1px solid var(--line); color: var(--muted); background: var(--surface);
 }
 .chips li.core { border-color: color-mix(in srgb, var(--accent) 45%, transparent); color: var(--accent); background: var(--accent-soft); }
+.chips .yrs { margin-left: 4px; font-size: 0.68rem; opacity: 0.75; white-space: nowrap; }
 
 .icon-btn {
   display: inline-grid; place-items: center;
@@ -547,7 +548,7 @@ strong { font-weight: 600; color: var(--text); }
 @media (max-width: 600px) { .decision-list { grid-template-columns: 1fr; } }
 
 /* ---------- What I can own ---------- */
-.own { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+.own { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
 .own-item {
   display: flex; flex-direction: column; gap: 8px; padding: 20px 22px;
   border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface);
@@ -736,7 +737,9 @@ strong { font-weight: 600; color: var(--text); }
 .edu-list li { padding: 18px 20px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); }
 .edu-degree { font-weight: 600; }
 .edu-list .edu-school { margin-top: 4px; }
-.langs { margin-top: 12px; padding: 18px 20px; border: 1px dashed var(--line-strong); border-radius: var(--radius); }
+.langs, .recognition { margin-top: 12px; padding: 18px 20px; border: 1px dashed var(--line-strong); border-radius: var(--radius); }
+.recognition .edu-degree { margin-top: 8px; }
+.recognition .edu-school { margin-top: 4px; line-height: 1.5; }
 .langs ul { margin-top: 10px; display: grid; gap: 6px; }
 .langs li { display: flex; justify-content: space-between; gap: 12px; }
 @media (max-width: 860px) { .edu-grid { grid-template-columns: 1fr; } }

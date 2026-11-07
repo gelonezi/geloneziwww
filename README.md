@@ -13,14 +13,22 @@ index.html                 The portfolio: hero, career highlights, intro video, 
 resume.html                One-column, ATS-readable résumé; prints cleanly to PDF
 css/styles.css             "Architect's blueprint" design; color tokens for both themes at the top
 css/resume.css             Résumé styles (light, print-first)
+js/theme.js                Blocking bootstrap: applies the saved theme before first paint (no inline script,
+                           so the CSP needs no hashes)
 js/main.js                 Theme toggle, mobile menu, active nav, reveal-on-scroll,
                            click-to-load YouTube player, interactive architecture diagram
-assets/favicon.svg
+js/resume.js               Print button on the résumé page
+404.html                   Branded not-found page (wrangler.jsonc: not_found_handling = 404-page)
+favicon.ico                32/16 px raster fallback; assets/favicon.svg is the primary icon
+assets/apple-touch-icon.png 180×180
 assets/img/                roger-gelonezi.jpg (portrait = GitHub avatar, 460×460), intro-poster.jpg,
                            og-image.png (1200×630)
-robots.txt, sitemap.xml    SEO
+robots.txt, sitemap.xml    SEO (sitemap has no lastmod on purpose: nothing to keep in sync)
+_headers                   Security headers and asset caching; CSP ships as Report-Only first
+_redirects                 www.gelonezi.com → gelonezi.com (301)
 wrangler.jsonc             Cloudflare Workers static assets (the folder is the site)
-.assetsignore              Files kept off the live site (repo tooling, notes, docs/)
+.assetsignore              Files kept off the live site (repo tooling, notes, docs/, .temp/)
+.gitattributes             LF line endings for text files, so diffs don't depend on core.autocrlf
 docs/                      Not published: caption file to upload to YouTube
 ```
 
@@ -36,8 +44,13 @@ Read `CLAUDE.md` first: it holds the positioning and the content rules (what mus
   `js/main.js`.
 - **Intro video**: `data-video-id` on `.player`; chapter buttons take a `data-start` in seconds.
 
-When the headline changes, also update `<title>`, the meta description, Open Graph tags, the JSON-LD block,
-`resume.html` and `assets/img/og-image.png`.
+When the headline changes, also update `<title>`, the meta description, Open Graph tags, the JSON-LD block
+(including `dateModified`), `resume.html` and `assets/img/og-image.png`. The Excalidraw board URL appears twice in
+`index.html` and once in `resume.html`; change all three together.
+
+**Promoting the CSP.** `_headers` ships `Content-Security-Policy-Report-Only`. After a deploy, open both pages in a
+browser, toggle the theme, play the video from a chapter button and print the résumé; if the console shows no CSP
+violations, rename the header to `Content-Security-Policy`.
 
 ## Run locally
 
