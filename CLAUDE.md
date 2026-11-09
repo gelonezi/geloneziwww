@@ -61,8 +61,8 @@ legacy modernization, production engineering, technical leadership, and applied 
 - The "Career highlights" section and the "office nightmare" LinkedIn post card were removed on purpose; don't
   reintroduce them.
 - Softplan progression (Roger, 2026-11-07): 2021 maintained the legacy system and extracted its use-case rules into
-  the new APIs' specifications; 2024 technical reference carrying the architect's responsibilities **without the title** (never write "Architect"
-  as a Softplan job title), trained the developers joining the team; 2025 sole
+  the new APIs' specifications; 2024 technical reference carrying the architect's responsibilities (never write "Architect" as a Softplan job title,
+  and don't add a "without the title" disclaimer either: Roger removed it on 2026-11-09), trained the developers joining the team; 2025 sole
   owner of the on-premises legacy-replacement strategy (configured, ran overnight and verified through observability
   the migrations of "a dozen clients") and trained the support team that took over maintenance. Earlier career:
   hands-on development plus sales and phone support at Solução Informática; tech lead at Lecom; led the
