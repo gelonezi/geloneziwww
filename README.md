@@ -6,7 +6,7 @@ Roger Gelonezi's portfolio, aimed at international recruiters hiring remote Seni
 ## Structure
 
 ```
-index.html                 The portfolio: hero, career highlights, intro video, featured system,
+index.html                 The portfolio: hero, intro video, featured system,
                            what I can own, experience, expertise (modernization / integrations /
                            production), principles & leadership, projects, applied AI, stack,
                            writing, education, contact
