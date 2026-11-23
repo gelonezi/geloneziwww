@@ -51,8 +51,11 @@ legacy modernization, production engineering, technical leadership, and applied 
   ABStartups, the city's SEDECON; prize included consulting support). It is a winning concept, not a launched product.
   Text only: no event photo (it shows other people).
 - **vibe-engineering** (github.com/gelonezi/vibe-engineering) is a project card; describe it from its README only and
-  state its current status (beta since v0.4.0, 2026-11-20: the Deliver track's ten skills are available, the other
-  tracks are planned). Since 2026-11-21 it is the "Now building" project.
+  state its current status. Read the README again before editing the card, and never hard-code a version number or a
+  skill count: the repository moves faster than the site (the card said "v0.4.0, ten skills" on 2026-11-21 and the
+  README was already at v0.5.0 with eleven skills on 2026-11-23). As of 2026-11-23: beta, MIT license, Deliver track
+  complete, Guide track started with the side panel, the other tracks planned. Since 2026-11-21 it is the
+  "Now building" project.
 - **MyMechanicShop is paused** (Roger, 2026-11-21, "at least for a couple of months"): its card stays, labeled
   "Paused"; don't show it as "Now building" until he says it has resumed.
 - **gnome-wallpaper-rotator** is a small "open-source contribution" card: always credit Andrew Zaech's Wallpaper
@@ -60,7 +63,9 @@ legacy modernization, production engineering, technical leadership, and applied 
 - Years per skill in the Stack section are Roger's own counts (from his Proxify profile): C#/.NET 15+, SQL Server 15+,
   ASP.NET 12, PostgreSQL 7, 5 for AWS/Kubernetes/Docker/microservices/RabbitMQ/MassTransit/DocumentDB/MongoDB/
   Elasticsearch/EF Core/REST, Robot Framework 4, Python 4, MLflow and Qdrant 1. Never round these up; do not add a
-  figure for a skill he hasn't given one for.
+  figure for a skill he hasn't given one for (so the Distributed systems, EKS and Elastic APM chips carry none). The
+  12 years are for ASP.NET as a whole: the figure sits on an "ASP.NET" chip, and "ASP.NET Core" (released in 2016) has
+  its own chip without one.
 - Job titles match LinkedIn exactly ("Senior Software Engineer" for both 2026 roles); the descriptor goes in the
   date line, never in the title.
 - The "Career highlights" section and the "office nightmare" LinkedIn post card were removed on purpose; don't
@@ -86,6 +91,14 @@ legacy modernization, production engineering, technical leadership, and applied 
   dark/light themes, accessibility (skip link, focus states, reduced motion, labelled controls), mobile layout
   (only the diagram may scroll sideways).
 - Static HTML + CSS + vanilla JS only. No frameworks, no build step, no new runtime dependencies.
+- The pages load nothing from a third party: IBM Plex is self-hosted in `fonts/` (latin subset, declared in
+  `css/fonts.css`) and the CSP allows only `'self'`. The single exception is the YouTube player, framed after a click.
+  Keep it that way: a new font weight or script is a file in the repository, not a CDN link.
+- Projects are two groups, in this order: professional work (proprietary, no public code) and open source (code you
+  can read). A new card goes into the group it belongs to.
+- Everything must still work when `js/main.js` doesn't run: content is visible, and the video poster and chapters are
+  ordinary links to YouTube.
+- Text contrast is at least 4.5:1 on every surface in both themes (WCAG AA); check before changing a color token.
 - Files that must not be served are listed in `.assetsignore`. `_headers` is consumed by Cloudflare as configuration, never served; a www→apex redirect must be a Cloudflare Redirect Rule (Workers static assets rejects host-based `_redirects` rules); `404.html` is the not-found page (`not_found_handling` in `wrangler.jsonc`).
 - `js/theme.js` must stay a blocking `<script src>` before the stylesheet: it is the theme bootstrap and the reason
   the CSP needs no inline-script hashes. Never move it back inline.

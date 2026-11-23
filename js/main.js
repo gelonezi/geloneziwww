@@ -44,8 +44,8 @@ const navLinks = new Map(
 const sectionObserver = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (!entry.isIntersecting) return;
-    navLinks.forEach((a) => a.classList.remove("active"));
-    navLinks.get(entry.target.id)?.classList.add("active");
+    navLinks.forEach((a) => a.removeAttribute("aria-current"));
+    navLinks.get(entry.target.id)?.setAttribute("aria-current", "location");
   });
 }, { rootMargin: "-45% 0px -50% 0px" });
 // Every section is observed; ones without a nav link simply clear the highlight.
@@ -67,8 +67,12 @@ if (reduceMotion || !("IntersectionObserver" in window)) {
   }, { rootMargin: "0px 0px -8% 0px", threshold: 0.05 });
   revealEls.forEach((el) => revealObserver.observe(el));
 }
+// Tells theme.js the reveal is wired up. Without this flag it shows everything once the page has loaded.
+root.classList.add("js-ready");
 
 // ---------- YouTube: local poster first, player only on demand ----------
+// The poster and the chapters are ordinary links to YouTube, so they work without this script.
+// Here a plain click plays the video inside the page; Ctrl/Cmd/Shift/middle click keeps the link.
 const player = document.querySelector(".player");
 const playVideo = (start = 0) => {
   const id = player.dataset.videoId;
@@ -81,15 +85,22 @@ const playVideo = (start = 0) => {
   iframe = document.createElement("iframe");
   iframe.src = src;
   iframe.title = player.dataset.title;
-  iframe.allow = "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen";
+  iframe.allow = "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture";
   iframe.allowFullscreen = true;
-  player.querySelector(".player-facade").replaceWith(iframe);
+  player.replaceChildren(iframe);
   iframe.focus();
 };
-player.querySelector(".player-facade").addEventListener("click", () => playVideo(0));
-document.querySelectorAll(".chapters button").forEach((btn) => {
-  btn.addEventListener("click", () => {
-    playVideo(Number(btn.dataset.start));
+const isPlainClick = (e) => e.button === 0 && !e.metaKey && !e.ctrlKey && !e.shiftKey && !e.altKey;
+player.querySelector(".player-facade").addEventListener("click", (e) => {
+  if (!isPlainClick(e)) return;
+  e.preventDefault();
+  playVideo(0);
+});
+document.querySelectorAll(".chapters a").forEach((link) => {
+  link.addEventListener("click", (e) => {
+    if (!isPlainClick(e)) return;
+    e.preventDefault();
+    playVideo(Number(link.dataset.start));
     player.scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth", block: "center" });
   });
 });
@@ -175,6 +186,14 @@ const NODES = {
     tags: ["Elasticsearch", "Kibana", "APM"],
   },
 };
+
+// The flowing dashes only animate while the diagram is on screen.
+const diagram = document.querySelector(".diagram");
+if ("IntersectionObserver" in window) {
+  new IntersectionObserver(([entry]) => diagram.classList.toggle("in-view", entry.isIntersecting)).observe(diagram);
+} else {
+  diagram.classList.add("in-view");
+}
 
 const panel = document.querySelector(".diagram-panel");
 const nodes = document.querySelectorAll(".arch .node");

@@ -1,15 +1,23 @@
 # Served by Cloudflare Workers static assets. The CSP is enforced (promoted from Report-Only on 2026-11-21 after
 # both pages and the 404 page showed no violations). To debug a change, rename it back to
 # Content-Security-Policy-Report-Only.
+# Everything the pages load is same-origin (fonts are self-hosted in /fonts); the only third party is the
+# YouTube player, which loads in a frame after a click.
 /*
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=()
   X-Frame-Options: DENY
-  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; frame-src https://www.youtube-nocookie.com; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'; frame-ancestors 'none'
+  Cross-Origin-Opener-Policy: same-origin
+  Strict-Transport-Security: max-age=31536000
+  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; frame-src https://www.youtube-nocookie.com; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'; frame-ancestors 'none'
 
 /assets/*
   Cache-Control: public, max-age=604800, stale-while-revalidate=86400
+
+# Font files never change under the same name (a new version gets a new file name).
+/fonts/*
+  Cache-Control: public, max-age=31536000, immutable
 
 /css/*
   Cache-Control: public, max-age=86400, stale-while-revalidate=86400
