@@ -51,7 +51,12 @@ legacy modernization, production engineering, technical leadership, and applied 
   ABStartups, the city's SEDECON; prize included consulting support). It is a winning concept, not a launched product.
   Text only: no event photo (it shows other people).
 - **vibe-engineering** (github.com/gelonezi/vibe-engineering) is a project card; describe it from its README only and
-  say it is early stage.
+  state its current status (beta since v0.4.0, 2026-11-20: the Deliver track's ten skills are available, the other
+  tracks are planned). Since 2026-11-21 it is the "Now building" project.
+- **MyMechanicShop is paused** (Roger, 2026-11-21, "at least for a couple of months"): its card stays, labeled
+  "Paused"; don't show it as "Now building" until he says it has resumed.
+- **gnome-wallpaper-rotator** is a small "open-source contribution" card: always credit Andrew Zaech's Wallpaper
+  Slideshow as the original, and describe it from its README only. **my-agents-skills** stays off the site.
 - Years per skill in the Stack section are Roger's own counts (from his Proxify profile): C#/.NET 15+, SQL Server 15+,
   ASP.NET 12, PostgreSQL 7, 5 for AWS/Kubernetes/Docker/microservices/RabbitMQ/MassTransit/DocumentDB/MongoDB/
   Elasticsearch/EF Core/REST, Robot Framework 4, Python 4, MLflow and Qdrant 1. Never round these up; do not add a

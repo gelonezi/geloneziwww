@@ -40,7 +40,7 @@
     "@type": "ProfilePage",
     "url": "https://gelonezi.com/",
     "dateCreated": "2026-10-12",
-    "dateModified": "2026-11-07",
+    "dateModified": "2026-11-21",
     "mainEntity": {
       "@type": "Person",
       "@id": "https://gelonezi.com/#person",
@@ -186,10 +186,10 @@
 
         <p class="now">
           <span class="now-tag"><span class="dot" aria-hidden="true"></span>Now building</span>
-          <span class="now-text"><strong>MyMechanicShop</strong>: a modular monolith on .NET 10 + ABP, one DDD module and database per business area.</span>
+          <span class="now-text"><strong>vibe-engineering</strong>: a Claude Code plugin that takes a feature from idea to merged pull request on a GitHub Projects board, with a design and a spec before the code.</span>
           <span class="now-links">
-            <a href="https://mymechanicshop.gelonezi.com/" target="_blank" rel="noopener">live ↗</a>
-            <a href="https://github.com/gelonezi/wip-my-mechanic-shop" target="_blank" rel="noopener">code ↗</a>
+            <a href="#projects">details ↓</a>
+            <a href="https://github.com/gelonezi/vibe-engineering" target="_blank" rel="noopener">code ↗</a>
           </span>
         </p>
       </div>
@@ -749,9 +749,25 @@
           </article>
 
           <article class="card reveal">
-            <p class="card-tag"><span class="tag-live">Now building</span> · Open source</p>
+            <p class="card-tag"><span class="tag-live">Now building</span> · Beta · Open source</p>
+            <h3>vibe-engineering</h3>
+            <p>A Claude Code plugin that gives AI-assisted development an engineering process: every feature is an item on a GitHub Projects board and moves from idea to design, spec, code and a reviewed pull request, with each step written into the item itself.</p>
+            <dl class="spec">
+              <div><dt>Flow</dt><dd>Ten skills, from <code>create-item</code> to <code>approve</code>: Draft → Backlog → Ready → In progress → In review → Done</dd></div>
+              <div><dt>Rules</dt><dd>Design and spec before code · one Ready item, one small pull request · a human approves every step</dd></div>
+              <div><dt>Status</dt><dd>Delivery track complete · repository assessment, project setup and templates planned</dd></div>
+              <div><dt>Requires</dt><dd>Claude Code · GitHub CLI with the project scope</dd></div>
+            </dl>
+            <p class="card-links">
+              <a href="https://github.com/gelonezi/vibe-engineering" target="_blank" rel="noopener">Code ↗</a>
+              <span class="muted">Beta · v0.4.0</span>
+            </p>
+          </article>
+
+          <article class="card reveal">
+            <p class="card-tag">Paused · Open source</p>
             <h3>MyMechanicShop</h3>
-            <p>A realistic domain for practicing backend architecture: a modular monolith where every business area is its own ABP module with its own database.</p>
+            <p>A realistic domain for practicing backend architecture: a modular monolith where every business area is its own ABP module with its own database. On hold for now; the code stays public.</p>
             <dl class="spec">
               <div><dt>Architecture</dt><dd>Modular monolith · DDD · module-per-database</dd></div>
               <div><dt>Backend</dt><dd>.NET 10 · ABP · EF Core · PostgreSQL · OpenIddict multi-tenancy</dd></div>
@@ -760,21 +776,6 @@
             <p class="card-links">
               <a href="https://mymechanicshop.gelonezi.com/" target="_blank" rel="noopener">Live (early stage) ↗</a>
               <a href="https://github.com/gelonezi/wip-my-mechanic-shop" target="_blank" rel="noopener">Code ↗</a>
-            </p>
-          </article>
-
-          <article class="card reveal">
-            <p class="card-tag"><span class="tag-live">Early stage</span> · Open source · Nov 2026</p>
-            <h3>vibe-engineering</h3>
-            <p>A Claude Code plugin I built for my own AI-assisted workflow: skills that move a piece of work across a GitHub Projects board, from idea to merged code, with every step written into the work item itself.</p>
-            <dl class="spec">
-              <div><dt>Built so far</dt><dd><code>create-board</code>: Draft → Done columns, iterations, estimates, six views · <code>create-item</code>: shapes an idea by conversation and files it as a Draft</dd></div>
-              <div><dt>Planned</dt><dd>Six more skills covering the rest of the flow, from high-level design to review and merge</dd></div>
-              <div><dt>Requires</dt><dd>Claude Code · GitHub CLI with the project scope</dd></div>
-            </dl>
-            <p class="card-links">
-              <a href="https://github.com/gelonezi/vibe-engineering" target="_blank" rel="noopener">Code ↗</a>
-              <span class="muted">Two of eight skills built</span>
             </p>
           </article>
 
@@ -829,6 +830,20 @@
             <p class="card-links"><span class="muted">Proprietary: no public code</span></p>
           </article>
 
+          <article class="card reveal">
+            <p class="card-tag">Open-source contribution · Nov 2026</p>
+            <h3>Wallpaper Rotator for GNOME</h3>
+            <p>A fork of Andrew Zaech's Wallpaper Slideshow, a GNOME Shell extension, with four opt-in features. Each one is also on its own branch based on the original, offered to its author for review.</p>
+            <dl class="spec">
+              <div><dt>Added</dt><dd>Background colors taken from the wallpaper's edges · keep image adjustment · include subfolders · panel icon</dd></div>
+              <div><dt>Stack</dt><dd>JavaScript · GNOME Shell extension · tested on GNOME 50</dd></div>
+            </dl>
+            <p class="card-links">
+              <a href="https://github.com/gelonezi/gnome-wallpaper-rotator" target="_blank" rel="noopener">Code ↗</a>
+              <a href="https://gitlab.com/AndrewZaech/azwallpaper" target="_blank" rel="noopener">Original project ↗</a>
+            </p>
+          </article>
+
         </div>
       </div>
     </section>
@@ -862,7 +877,7 @@
           <article class="ai-card reveal">
             <span class="p-id">A-03</span>
             <h3>AI-assisted software engineering</h3>
-            <p>Claude Code, GitHub Copilot, Cursor, Codex and MCP as accelerators, inside a discipline I'm turning into tooling (<a href="#projects">vibe-engineering</a>):</p>
+            <p>Claude Code, GitHub Copilot, Cursor, Codex and MCP as accelerators, inside a discipline I turned into tooling (<a href="#projects">vibe-engineering</a>, now in beta):</p>
             <ul class="ai-rules">
               <li>Specs first, work decomposed into small tasks</li>
               <li>Architecture decisions made by me</li>

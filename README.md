@@ -6,7 +6,7 @@ Roger Gelonezi's portfolio, aimed at international recruiters hiring remote Seni
 ## Structure
 
 ```
-index.html                 The portfolio: hero, career highlights, intro video, featured system,
+index.html                 The portfolio: hero, intro video, featured system,
                            what I can own, experience, expertise (modernization / integrations /
                            production), principles & leadership, projects, applied AI, stack,
                            writing, education, contact
@@ -24,7 +24,7 @@ assets/apple-touch-icon.png 180×180
 assets/img/                roger-gelonezi.jpg (portrait = GitHub avatar, 460×460), intro-poster.jpg,
                            og-image.png (1200×630)
 robots.txt, sitemap.xml    SEO (sitemap has no lastmod on purpose: nothing to keep in sync)
-_headers                   Security headers and asset caching; CSP ships as Report-Only first
+_headers                   Security headers and asset caching; the CSP is enforced
 wrangler.jsonc             Cloudflare Workers static assets (the folder is the site)
 .assetsignore              Files kept off the live site (repo tooling, notes, docs/, .temp/)
 .gitattributes             LF line endings for text files, so diffs don't depend on core.autocrlf
@@ -47,9 +47,10 @@ When the headline changes, also update `<title>`, the meta description, Open Gra
 (including `dateModified`), `resume.html` and `assets/img/og-image.png`. The Excalidraw board URL appears twice in
 `index.html` and once in `resume.html`; change all three together.
 
-**Promoting the CSP.** `_headers` ships `Content-Security-Policy-Report-Only`. After a deploy, open both pages in a
-browser, toggle the theme, play the video from a chapter button and print the résumé; if the console shows no CSP
-violations, rename the header to `Content-Security-Policy`.
+**Changing the CSP.** `_headers` enforces `Content-Security-Policy`. When a change needs a new source (a script,
+font, image host or embed), add it to the policy in the same commit. To test a risky change, rename the header to
+`Content-Security-Policy-Report-Only`, deploy, open both pages, toggle the theme, play the video from a chapter button
+and print the résumé; if the console shows no violations, rename it back.
 
 ## Run locally
 

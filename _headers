@@ -1,11 +1,12 @@
-# Served by Cloudflare Workers static assets. Report-Only CSP first: promote it to
-# Content-Security-Policy once the browser console shows no violations on both pages.
+# Served by Cloudflare Workers static assets. The CSP is enforced (promoted from Report-Only on 2026-11-21 after
+# both pages and the 404 page showed no violations). To debug a change, rename it back to
+# Content-Security-Policy-Report-Only.
 /*
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=()
   X-Frame-Options: DENY
-  Content-Security-Policy-Report-Only: default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; frame-src https://www.youtube-nocookie.com; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'; frame-ancestors 'none'
+  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; frame-src https://www.youtube-nocookie.com; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'; frame-ancestors 'none'
 
 /assets/*
   Cache-Control: public, max-age=604800, stale-while-revalidate=86400
