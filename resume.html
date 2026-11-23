@@ -26,9 +26,8 @@
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"ProfilePage","url":"https://gelonezi.com/resume","name":"Roger Gelonezi — Résumé","mainEntity":{"@id":"https://gelonezi.com/#person"}}
   </script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=IBM+Plex+Sans:wght@400;600;700&display=swap">
+  <link rel="preload" href="fonts/ibm-plex-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/fonts.css">
   <link rel="stylesheet" href="css/resume.css">
 </head>
 <body>
@@ -182,7 +181,7 @@
       <h2>Selected projects</h2>
       <ul>
         <li><strong>Judiciary integration platform (Softplan)</strong>: one API contract over ~20 Brazilian judiciary systems; 25+ .NET microservices on AWS EKS at 200,000+ requests per day and 99% uptime. Generalized reference architecture: <a href="https://github.com/gelonezi/system-design-exercises">github.com/gelonezi/system-design-exercises</a> · Board: <a href="https://excalidraw.com/#json=a-eHnApUWQOO8Mw825KjP,vkUMiKu2Mo9H3pV9tt0TKg">Excalidraw</a></li>
-        <li><strong>vibe-engineering</strong> (beta): a Claude Code plugin with ten skills that move a feature across a GitHub Projects board from idea to design, spec, code and a reviewed, merged pull request, with a human approving every step. <a href="https://github.com/gelonezi/vibe-engineering">github.com/gelonezi/vibe-engineering</a></li>
+        <li><strong>vibe-engineering</strong> (beta): a Claude Code plugin whose skills move a feature across a GitHub Projects board from idea to design, spec, code and a reviewed, merged pull request, with a human approving every step. <a href="https://github.com/gelonezi/vibe-engineering">github.com/gelonezi/vibe-engineering</a></li>
         <li><strong>MyMechanicShop</strong>: modular monolith on .NET 10, ABP, EF Core and PostgreSQL; DDD with a database per module. <a href="https://github.com/gelonezi/wip-my-mechanic-shop">github.com/gelonezi/wip-my-mechanic-shop</a></li>
         <li><strong>Mecânica Hermes (FIAP, team of four)</strong>: distributed mechanic-shop backend with three .NET 10 microservices and a Lambda; RabbitMQ and MassTransit with Saga, transactional Outbox and idempotent consumers; PostgreSQL and MongoDB; Terraform, AWS EKS, RDS, Cognito and API Gateway. <a href="https://github.com/fiap-challenge-13soat/mecanica-hermes-docs/wiki">github.com/fiap-challenge-13soat/mecanica-hermes-docs/wiki</a></li>
       </ul>

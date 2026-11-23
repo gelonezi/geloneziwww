@@ -7,6 +7,7 @@
   <title>Roger Gelonezi — Senior/Staff Backend Engineer &amp; .NET Software Architect</title>
   <meta name="description" content="Senior/Staff Backend Engineer and .NET Software Architect. 20+ years hands-on; C#/.NET, distributed systems, AWS, legacy modernization. Brazil, UTC−3, English C1, remote.">
   <meta name="author" content="Roger Gelonezi">
+  <meta name="color-scheme" content="dark light">
   <meta name="theme-color" content="#07121f">
   <link rel="canonical" href="https://gelonezi.com/">
 
@@ -29,43 +30,60 @@
 
   <!-- Blocking on purpose: applies the saved theme before the first paint -->
   <script src="js/theme.js"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap">
+  <!-- Fonts are self-hosted (fonts/). The Sans file carries the headline, so it is fetched early. -->
+  <link rel="preload" href="fonts/ibm-plex-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/fonts.css">
   <link rel="stylesheet" href="css/styles.css">
 
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "ProfilePage",
-    "url": "https://gelonezi.com/",
-    "dateCreated": "2026-10-12",
-    "dateModified": "2026-11-21",
-    "mainEntity": {
-      "@type": "Person",
-      "@id": "https://gelonezi.com/#person",
-      "name": "Roger Gelonezi",
-      "alternateName": ["Rogério Gelonezi"],
-      "jobTitle": "Senior / Staff Backend Engineer & .NET Software Architect",
-      "description": "Senior/Staff Backend Engineer and .NET Software Architect with 20+ years of hands-on software engineering, specialized in C#/.NET, distributed systems, AWS, legacy modernization and applied AI.",
-      "award": "1st place, Ideathon Lençóis Paulista (October 2026), team concept Cidade em Dia",
-      "url": "https://gelonezi.com/",
-      "image": "https://gelonezi.com/assets/img/roger-gelonezi.jpg",
-      "worksFor": { "@type": "Organization", "name": "Softplan" },
-      "homeLocation": { "@type": "Place", "address": { "@type": "PostalAddress", "addressCountry": "BR" } },
-      "alumniOf": [
-        { "@type": "CollegeOrUniversity", "name": "FIAP" },
-        { "@type": "CollegeOrUniversity", "name": "Universidade Virtual do Estado de São Paulo (UNIVESP)" },
-        { "@type": "CollegeOrUniversity", "name": "ITE – Instituição Toledo de Ensino" }
-      ],
-      "knowsLanguage": ["en", "pt-BR"],
-      "knowsAbout": ["C#", ".NET", "ASP.NET Core", "Backend Engineering", "Distributed Systems", "Microservices", "Software Architecture", "Event-Driven Architecture", "AWS", "Kubernetes", "API Integration", "Legacy Modernization", "SQL Server", "PostgreSQL", "RabbitMQ", "MassTransit", "Observability", "Applied AI", "Technical Leadership"],
-      "sameAs": [
-        "https://www.linkedin.com/in/gelonezi/",
-        "https://github.com/gelonezi",
-        "https://www.youtube.com/@rgelonezi"
-      ]
-    }
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://gelonezi.com/#website",
+        "url": "https://gelonezi.com/",
+        "name": "Roger Gelonezi",
+        "inLanguage": "en",
+        "publisher": { "@id": "https://gelonezi.com/#person" }
+      },
+      {
+        "@type": "ProfilePage",
+        "@id": "https://gelonezi.com/#profile",
+        "url": "https://gelonezi.com/",
+        "name": "Roger Gelonezi — Senior/Staff Backend Engineer & .NET Software Architect",
+        "isPartOf": { "@id": "https://gelonezi.com/#website" },
+        "inLanguage": "en",
+        "dateCreated": "2026-10-12",
+        "dateModified": "2026-11-23",
+        "mainEntity": { "@id": "https://gelonezi.com/#person" }
+      },
+      {
+        "@type": "Person",
+        "@id": "https://gelonezi.com/#person",
+        "name": "Roger Gelonezi",
+        "alternateName": ["Rogério Gelonezi"],
+        "jobTitle": "Senior / Staff Backend Engineer & .NET Software Architect",
+        "description": "Senior/Staff Backend Engineer and .NET Software Architect with 20+ years of hands-on software engineering, specialized in C#/.NET, distributed systems, AWS, legacy modernization and applied AI.",
+        "award": "1st place, Ideathon Lençóis Paulista (October 2026), team concept Cidade em Dia",
+        "url": "https://gelonezi.com/",
+        "image": "https://gelonezi.com/assets/img/roger-gelonezi.jpg",
+        "worksFor": { "@type": "Organization", "name": "Softplan" },
+        "homeLocation": { "@type": "Place", "address": { "@type": "PostalAddress", "addressCountry": "BR" } },
+        "alumniOf": [
+          { "@type": "CollegeOrUniversity", "name": "FIAP" },
+          { "@type": "CollegeOrUniversity", "name": "Universidade Virtual do Estado de São Paulo (UNIVESP)" },
+          { "@type": "CollegeOrUniversity", "name": "ITE – Instituição Toledo de Ensino" }
+        ],
+        "knowsLanguage": ["en", "pt-BR"],
+        "knowsAbout": ["C#", ".NET", "ASP.NET Core", "Backend Engineering", "Distributed Systems", "Microservices", "Software Architecture", "Event-Driven Architecture", "AWS", "Kubernetes", "API Integration", "Legacy Modernization", "SQL Server", "PostgreSQL", "RabbitMQ", "MassTransit", "Observability", "Applied AI", "Technical Leadership"],
+        "sameAs": [
+          "https://www.linkedin.com/in/gelonezi/",
+          "https://github.com/gelonezi",
+          "https://www.youtube.com/@rgelonezi"
+        ]
+      }
+    ]
   }
   </script>
 </head>
@@ -75,7 +93,7 @@
   <!-- ================= HEADER ================= -->
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="#top" aria-label="Roger Gelonezi — back to top">
+      <a class="brand" href="#top" aria-label="RG gelonezi, back to top">
         <span class="brand-mark" aria-hidden="true">RG</span>
         <span class="brand-name">gelonezi</span>
       </a>
@@ -116,7 +134,7 @@
         <div class="hero-copy">
           <p class="whoami"><span class="path">~/gelonezi</span> <span class="dollar">$</span> whoami<span class="caret" aria-hidden="true"></span></p>
           <h1>Roger Gelonezi</h1>
-          <p class="role"><span class="r">Senior / Staff Backend Engineer</span> <span class="sep" aria-hidden="true">·</span> <span class="r">.NET Software Architect</span></p>
+          <p class="role"><span class="r">Senior / Staff Backend Engineer</span> <span class="r">.NET Software Architect</span></p>
           <p class="techline">C#/.NET · Distributed Systems · AWS · Applied AI</p>
           <p class="lead">
             I design, modernize, scale and operate distributed backend systems in <strong>C#/.NET</strong> on <strong>AWS</strong>,
@@ -144,7 +162,7 @@
 
         <figure class="portrait">
           <div class="portrait-frame">
-            <img src="assets/img/roger-gelonezi.jpg" width="460" height="460" alt="Portrait of Roger Gelonezi" fetchpriority="high">
+            <img src="assets/img/roger-gelonezi.jpg" width="460" height="460" alt="Portrait of Roger Gelonezi" fetchpriority="high" decoding="async">
           </div>
           <figcaption><span class="fig">FIG. 01</span> Lençóis Paulista, SP · Brazil</figcaption>
         </figure>
@@ -188,7 +206,7 @@
           <span class="now-tag"><span class="dot" aria-hidden="true"></span>Now building</span>
           <span class="now-text"><strong>vibe-engineering</strong>: a Claude Code plugin that takes a feature from idea to merged pull request on a GitHub Projects board, with a design and a spec before the code.</span>
           <span class="now-links">
-            <a href="#projects">details ↓</a>
+            <a href="#vibe-engineering">details ↓</a>
             <a href="https://github.com/gelonezi/vibe-engineering" target="_blank" rel="noopener">code ↗</a>
           </span>
         </p>
@@ -205,21 +223,22 @@
         </header>
 
         <div class="intro-grid reveal">
+          <!-- Plain links to YouTube; main.js upgrades them to play inside the page. -->
           <div class="player" data-video-id="SXOTWL6vKKg" data-title="Roger Gelonezi — Presentation">
-            <button class="player-facade" type="button" aria-label="Play video: Roger Gelonezi presentation (3 minutes)">
-              <img src="assets/img/intro-poster.jpg" width="1280" height="720" alt="" loading="lazy">
+            <a class="player-facade" href="https://www.youtube.com/watch?v=SXOTWL6vKKg" target="_blank" rel="noopener" aria-label="Play video: Roger Gelonezi presentation (3 minutes)">
+              <img src="assets/img/intro-poster.jpg" width="1280" height="720" alt="" loading="lazy" decoding="async">
               <span class="player-play" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 24 24"><path fill="currentColor" d="M7 4.5v15l13-7.5z"/></svg></span>
-              <span class="player-meta" aria-hidden="true">2:58 · EN</span>
-            </button>
+            </a>
+            <span class="player-meta" aria-hidden="true">2:58 · EN</span>
           </div>
 
           <div class="intro-side">
             <p class="mono-label">Chapters</p>
             <ol class="chapters">
-              <li><button type="button" data-start="0"><span class="t">0:00</span> Coding since 2001, many industries</button></li>
-              <li><button type="button" data-start="35"><span class="t">0:35</span> 25 microservices replacing a legacy monolith</button></li>
-              <li><button type="button" data-start="85"><span class="t">1:25</span> Owning the docs, the architecture and the cutovers</button></li>
-              <li><button type="button" data-start="138"><span class="t">2:18</span> Onboarding and mentoring, intern to senior</button></li>
+              <li><a href="https://www.youtube.com/watch?v=SXOTWL6vKKg" target="_blank" rel="noopener" data-start="0"><span class="t">0:00</span> Coding since 2001, many industries</a></li>
+              <li><a href="https://www.youtube.com/watch?v=SXOTWL6vKKg&amp;t=35s" target="_blank" rel="noopener" data-start="35"><span class="t">0:35</span> 25 microservices replacing a legacy monolith</a></li>
+              <li><a href="https://www.youtube.com/watch?v=SXOTWL6vKKg&amp;t=85s" target="_blank" rel="noopener" data-start="85"><span class="t">1:25</span> Owning the docs, the architecture and the cutovers</a></li>
+              <li><a href="https://www.youtube.com/watch?v=SXOTWL6vKKg&amp;t=138s" target="_blank" rel="noopener" data-start="138"><span class="t">2:18</span> Onboarding and mentoring, intern to senior</a></li>
             </ol>
             <blockquote class="pull">
               <p>“I've always been a tech lead, even at the beginning of my career. It's something I carry with a lot of pride.”</p>
@@ -228,7 +247,7 @@
         </div>
 
         <details class="transcript reveal">
-          <summary>Read the transcript <span class="muted">(lightly edited for readability)</span></summary>
+          <summary><span>Read the transcript <span class="muted">(lightly edited for readability)</span></span></summary>
           <div class="transcript-body">
             <p>Hi, my name is Roger. I'm a senior software engineer, and I started my career in 2001. So yes, I have a lot of experience behind me: I've worked with many kinds of companies and industries, and built software for many kinds of architectures and server environments. I'll focus on my latest projects, or this would be a half-hour video.</p>
             <p>I can talk a little about a set of microservices: 25 microservices in a fully scalable architecture, built to replace legacy systems. Each microservice replaced, one by one, an operation of the legacy monolith. It was a fully agile environment, so we could validate step by step, in real time, and every step taught us something about reading and writing documentation.</p>
@@ -297,33 +316,33 @@
               <text class="edge-label" x="862" y="128">SOAP · REST</text>
 
               <!-- nodes -->
-              <g class="node node-ext" data-node="consumers" transform="translate(20,212)" tabindex="0" role="button" aria-label="Internal products">
+              <g class="node node-ext" data-node="consumers" transform="translate(20,212)" tabindex="0" role="button">
                 <rect width="150" height="116" rx="8"/>
                 <text class="n-title" x="75" y="46">Internal</text>
                 <text class="n-title" x="75" y="66">products</text>
                 <text class="n-sub" x="75" y="90">one API contract</text>
               </g>
 
-              <g class="node" data-node="ingress" transform="translate(236,150)" tabindex="0" role="button" aria-label="Ingress, synchronous path">
+              <g class="node" data-node="ingress" transform="translate(236,150)" tabindex="0" role="button">
                 <rect width="150" height="64" rx="8"/>
                 <text class="n-title" x="75" y="29">Ingress</text>
                 <text class="n-sub" x="75" y="48">REST · sync</text>
               </g>
 
-              <g class="node" data-node="mq" transform="translate(236,320)" tabindex="0" role="button" aria-label="RabbitMQ and async processor">
+              <g class="node" data-node="mq" transform="translate(236,320)" tabindex="0" role="button">
                 <rect width="150" height="64" rx="8"/>
                 <text class="n-title" x="75" y="29">RabbitMQ</text>
                 <text class="n-sub" x="75" y="48">async processor</text>
               </g>
 
-              <g class="node node-core" data-node="controllers" transform="translate(450,180)" tabindex="0" role="button" aria-label="Controllers, orchestration">
+              <g class="node node-core" data-node="controllers" transform="translate(450,180)" tabindex="0" role="button">
                 <rect width="150" height="150" rx="8"/>
                 <text class="n-title" x="75" y="62">Controllers</text>
                 <text class="n-sub" x="75" y="84">orchestration</text>
                 <text class="n-sub" x="75" y="102">5-op contract</text>
               </g>
 
-              <g class="node node-core" data-node="connectors" transform="translate(660,100)" tabindex="0" role="button" aria-label="Connectors, stateless adapters">
+              <g class="node node-core" data-node="connectors" transform="translate(660,100)" tabindex="0" role="button">
                 <rect class="stack" x="16" y="16" width="180" height="60" rx="8"/>
                 <rect class="stack" x="8" y="8" width="180" height="60" rx="8"/>
                 <rect width="180" height="60" rx="8"/>
@@ -331,19 +350,19 @@
                 <text class="n-sub" x="90" y="46">stateless adapters ×N</text>
               </g>
 
-              <g class="node" data-node="sdk" transform="translate(660,236)" tabindex="0" role="button" aria-label="SDK, shared protocol contracts">
+              <g class="node" data-node="sdk" transform="translate(660,236)" tabindex="0" role="button">
                 <rect width="196" height="50" rx="8"/>
                 <text class="n-title" x="98" y="22">SDK</text>
                 <text class="n-sub" x="98" y="39">protocol contracts</text>
               </g>
 
-              <g class="node" data-node="catalog" transform="translate(660,318)" tabindex="0" role="button" aria-label="Catalog, per-system configuration">
+              <g class="node" data-node="catalog" transform="translate(660,318)" tabindex="0" role="button">
                 <rect width="196" height="50" rx="8"/>
                 <text class="n-title" x="98" y="22">Catalog</text>
                 <text class="n-sub" x="98" y="39">per-system config</text>
               </g>
 
-              <g class="node node-ext" data-node="courts" transform="translate(910,150)" tabindex="0" role="button" aria-label="About twenty court and prosecutor systems">
+              <g class="node node-ext" data-node="courts" transform="translate(910,150)" tabindex="0" role="button">
                 <rect class="stack" x="16" y="16" width="160" height="110" rx="8"/>
                 <rect class="stack" x="8" y="8" width="160" height="110" rx="8"/>
                 <rect width="160" height="110" rx="8"/>
@@ -352,30 +371,30 @@
                 <text class="n-sub" x="80" y="84">~20 systems</text>
               </g>
 
-              <g class="node node-sup" data-node="docdb" transform="translate(115,488)" tabindex="0" role="button" aria-label="Amazon DocumentDB">
-                <rect width="150" height="56" rx="8"/>
-                <text class="n-title" x="75" y="25">DocumentDB</text>
-                <text class="n-sub" x="75" y="43">metadata · cache</text>
+              <g class="node node-sup" data-node="docdb" transform="translate(107,488)" tabindex="0" role="button">
+                <rect width="166" height="56" rx="8"/>
+                <text class="n-title" x="83" y="25">DocumentDB</text>
+                <text class="n-sub" x="83" y="43">metadata · cache</text>
               </g>
-              <g class="node node-sup" data-node="s3" transform="translate(295,488)" tabindex="0" role="button" aria-label="Amazon S3">
-                <rect width="150" height="56" rx="8"/>
-                <text class="n-title" x="75" y="25">S3</text>
-                <text class="n-sub" x="75" y="43">document binaries</text>
+              <g class="node node-sup" data-node="s3" transform="translate(287,488)" tabindex="0" role="button">
+                <rect width="166" height="56" rx="8"/>
+                <text class="n-title" x="83" y="25">S3</text>
+                <text class="n-sub" x="83" y="43">document binaries</text>
               </g>
-              <g class="node node-sup" data-node="keycloak" transform="translate(475,488)" tabindex="0" role="button" aria-label="Keycloak">
-                <rect width="150" height="56" rx="8"/>
-                <text class="n-title" x="75" y="25">Keycloak</text>
-                <text class="n-sub" x="75" y="43">authentication</text>
+              <g class="node node-sup" data-node="keycloak" transform="translate(467,488)" tabindex="0" role="button">
+                <rect width="166" height="56" rx="8"/>
+                <text class="n-title" x="83" y="25">Keycloak</text>
+                <text class="n-sub" x="83" y="43">authentication</text>
               </g>
-              <g class="node node-sup" data-node="vault" transform="translate(655,488)" tabindex="0" role="button" aria-label="HashiCorp Vault">
-                <rect width="150" height="56" rx="8"/>
-                <text class="n-title" x="75" y="25">Vault</text>
-                <text class="n-sub" x="75" y="43">external credentials</text>
+              <g class="node node-sup" data-node="vault" transform="translate(647,488)" tabindex="0" role="button">
+                <rect width="166" height="56" rx="8"/>
+                <text class="n-title" x="83" y="25">Vault</text>
+                <text class="n-sub" x="83" y="43">external credentials</text>
               </g>
-              <g class="node node-sup" data-node="elastic" transform="translate(835,488)" tabindex="0" role="button" aria-label="Elastic Stack and APM">
-                <rect width="150" height="56" rx="8"/>
-                <text class="n-title" x="75" y="25">Elastic APM</text>
-                <text class="n-sub" x="75" y="43">logs · metrics · traces</text>
+              <g class="node node-sup" data-node="elastic" transform="translate(827,488)" tabindex="0" role="button">
+                <rect width="166" height="56" rx="8"/>
+                <text class="n-title" x="83" y="25">Elastic APM</text>
+                <text class="n-sub" x="83" y="43">logs · metrics · traces</text>
               </g>
             </svg>
           </div>
@@ -726,13 +745,14 @@
         <header class="sec-head reveal">
           <p class="sec-index">07 / Projects</p>
           <h2>Things I've built</h2>
-          <p class="sec-lead">Open-source work you can read, plus professional products I can describe but not show.</p>
+          <p class="sec-lead">Professional products I can describe but not show, then open-source work you can read.</p>
         </header>
 
+        <h3 class="mono-label card-group reveal">Professional · proprietary, no public code</h3>
         <div class="cards">
           <article class="card reveal">
-            <p class="card-tag">Professional · Softplan · 2021–2026 · GovTech</p>
-            <h3>Judiciary integration platform</h3>
+            <p class="card-tag">Softplan · 2021–2026 · GovTech</p>
+            <h4>Judiciary integration platform</h4>
             <p>The cloud-native platform behind the featured system: it replaced a legacy system over four years and keeps ~20 Brazilian judiciary systems in real-time sync.</p>
             <p class="callout"><strong>200,000+ requests/day · 99% uptime</strong>, with zero-incident client cutovers.</p>
             <dl class="spec">
@@ -744,44 +764,63 @@
             <p class="card-links">
               <a href="#system">See the architecture ↑</a>
               <a href="https://excalidraw.com/#json=a-eHnApUWQOO8Mw825KjP,vkUMiKu2Mo9H3pV9tt0TKg" target="_blank" rel="noopener">Excalidraw board ↗</a>
-              <span class="muted">Proprietary: no public code</span>
             </p>
           </article>
 
           <article class="card reveal">
-            <p class="card-tag"><span class="tag-live">Now building</span> · Beta · Open source</p>
-            <h3>vibe-engineering</h3>
+            <p class="card-tag">Softplan · 2026</p>
+            <h4>Legal document classifier</h4>
+            <p>A production ML classifier that routes cases at a public prosecutor's office, replacing manual triage.</p>
+            <p class="callout"><strong>~40% → 80%+ accuracy</strong>, scaled from 12 to 140+ labels.</p>
+            <dl class="spec">
+              <div><dt>Stack</dt><dd>C# serving API · MLflow · Qdrant · Python</dd></div>
+              <div><dt>Focus</dt><dd>Multi-tenant model · reproducible training</dd></div>
+            </dl>
+            <p class="card-links"><a href="#ai">More in Applied AI ↓</a></p>
+          </article>
+
+          <article class="card reveal">
+            <p class="card-tag">Softplan · 2026</p>
+            <h4>Legal AI assistant</h4>
+            <p>A C#/.NET assistant over lawsuit documents: agent workflows answer questions, summarize case files and help draft legal documents, with a human approving key decisions.</p>
+            <dl class="spec">
+              <div><dt>Stack</dt><dd>C# / .NET · Microsoft Agent Framework · AG-UI</dd></div>
+              <div><dt>Focus</dt><dd>Agent workflows · document context · human oversight</dd></div>
+            </dl>
+            <p class="card-links"><a href="#ai">More in Applied AI ↓</a></p>
+          </article>
+
+          <article class="card reveal">
+            <p class="card-tag">Eris Sistemas · 2021</p>
+            <h4>Bookstore self-checkout</h4>
+            <p>A self-checkout for a major São Paulo bookstore: the mobile app plus the backend integration with PagSeguro payments. PagSeguro later cited it as a benchmark: their first self-checkout built in React Native.</p>
+            <dl class="spec">
+              <div><dt>Stack</dt><dd>React Native · PagSeguro integration · backend</dd></div>
+            </dl>
+          </article>
+        </div>
+
+        <h3 class="mono-label card-group reveal">Open source · code you can read</h3>
+        <div class="cards">
+          <article id="vibe-engineering" class="card reveal">
+            <p class="card-tag"><span class="tag-live">Now building</span> · Beta</p>
+            <h4>vibe-engineering</h4>
             <p>A Claude Code plugin that gives AI-assisted development an engineering process: every feature is an item on a GitHub Projects board and moves from idea to design, spec, code and a reviewed pull request, with each step written into the item itself.</p>
             <dl class="spec">
-              <div><dt>Flow</dt><dd>Ten skills, from <code>create-item</code> to <code>approve</code>: Draft → Backlog → Ready → In progress → In review → Done</dd></div>
+              <div><dt>Flow</dt><dd>A skill for each step, from <code>create-item</code> to <code>approve</code>: Draft → Backlog → Ready → In progress → In review → Done</dd></div>
               <div><dt>Rules</dt><dd>Design and spec before code · one Ready item, one small pull request · a human approves every step</dd></div>
-              <div><dt>Status</dt><dd>Delivery track complete · repository assessment, project setup and templates planned</dd></div>
+              <div><dt>Status</dt><dd>Delivery track complete · a side panel shows the board beside the chat · repository assessment, project setup and templates planned</dd></div>
               <div><dt>Requires</dt><dd>Claude Code · GitHub CLI with the project scope</dd></div>
             </dl>
             <p class="card-links">
               <a href="https://github.com/gelonezi/vibe-engineering" target="_blank" rel="noopener">Code ↗</a>
-              <span class="muted">Beta · v0.4.0</span>
+              <span class="muted">Beta · MIT license</span>
             </p>
           </article>
 
           <article class="card reveal">
-            <p class="card-tag">Paused · Open source</p>
-            <h3>MyMechanicShop</h3>
-            <p>A realistic domain for practicing backend architecture: a modular monolith where every business area is its own ABP module with its own database. On hold for now; the code stays public.</p>
-            <dl class="spec">
-              <div><dt>Architecture</dt><dd>Modular monolith · DDD · module-per-database</dd></div>
-              <div><dt>Backend</dt><dd>.NET 10 · ABP · EF Core · PostgreSQL · OpenIddict multi-tenancy</dd></div>
-              <div><dt>Quality</dt><dd>CodeQL · SonarCloud quality gate · Angular client</dd></div>
-            </dl>
-            <p class="card-links">
-              <a href="https://mymechanicshop.gelonezi.com/" target="_blank" rel="noopener">Live (early stage) ↗</a>
-              <a href="https://github.com/gelonezi/wip-my-mechanic-shop" target="_blank" rel="noopener">Code ↗</a>
-            </p>
-          </article>
-
-          <article class="card reveal">
-            <p class="card-tag">FIAP postgrad · Team of four · Open source</p>
-            <h3>Mecânica Hermes</h3>
+            <p class="card-tag">FIAP postgrad · Team of four</p>
+            <h4>Mecânica Hermes</h4>
             <p>A distributed backend for a mechanic shop, built by a four-person team across the postgrad's Tech Challenge phases: vehicle intake, quotes approved by the customer via signed webhook, Mercado Pago payment and vehicle release.</p>
             <p class="callout"><strong>AI-assisted delivery.</strong> A phase scoped for a two-month term implemented in ~20 hours, with the architecture and every change reviewed by me.</p>
             <dl class="spec">
@@ -798,41 +837,23 @@
           </article>
 
           <article class="card reveal">
-            <p class="card-tag">Professional · Softplan · 2026</p>
-            <h3>Legal AI assistant</h3>
-            <p>A C#/.NET assistant over lawsuit documents: agent workflows answer questions, summarize case files and help draft legal documents, with a human approving key decisions.</p>
+            <p class="card-tag">Paused</p>
+            <h4>MyMechanicShop</h4>
+            <p>A realistic domain for practicing backend architecture: a modular monolith where every business area is its own ABP module with its own database. On hold for now; the code stays public.</p>
             <dl class="spec">
-              <div><dt>Stack</dt><dd>C# / .NET · Microsoft Agent Framework · AG-UI</dd></div>
-              <div><dt>Focus</dt><dd>Agent workflows · document context · human oversight</dd></div>
+              <div><dt>Architecture</dt><dd>Modular monolith · DDD · module-per-database</dd></div>
+              <div><dt>Backend</dt><dd>.NET 10 · ABP · EF Core · PostgreSQL · OpenIddict multi-tenancy</dd></div>
+              <div><dt>Quality</dt><dd>CodeQL · SonarCloud quality gate · Angular client</dd></div>
             </dl>
-            <p class="card-links"><a href="#ai">More in Applied AI ↓</a><span class="muted">Proprietary: no public code</span></p>
-          </article>
-
-          <article class="card reveal">
-            <p class="card-tag">Professional · Softplan · 2026</p>
-            <h3>Legal document classifier</h3>
-            <p>A production ML classifier that routes cases at a public prosecutor's office, replacing manual triage.</p>
-            <p class="callout"><strong>~40% → 80%+ accuracy</strong>, scaled from 12 to 140+ labels.</p>
-            <dl class="spec">
-              <div><dt>Stack</dt><dd>C# serving API · MLflow · Qdrant · Python</dd></div>
-              <div><dt>Focus</dt><dd>Multi-tenant model · reproducible training</dd></div>
-            </dl>
-            <p class="card-links"><a href="#ai">More in Applied AI ↓</a><span class="muted">Proprietary: no public code</span></p>
-          </article>
-
-          <article class="card reveal">
-            <p class="card-tag">Professional · Eris Sistemas · 2021</p>
-            <h3>Bookstore self-checkout</h3>
-            <p>A self-checkout for a major São Paulo bookstore: the mobile app plus the backend integration with PagSeguro payments. PagSeguro later cited it as a benchmark: their first self-checkout built in React Native.</p>
-            <dl class="spec">
-              <div><dt>Stack</dt><dd>React Native · PagSeguro integration · backend</dd></div>
-            </dl>
-            <p class="card-links"><span class="muted">Proprietary: no public code</span></p>
+            <p class="card-links">
+              <a href="https://mymechanicshop.gelonezi.com/" target="_blank" rel="noopener">Live (early stage) ↗</a>
+              <a href="https://github.com/gelonezi/wip-my-mechanic-shop" target="_blank" rel="noopener">Code ↗</a>
+            </p>
           </article>
 
           <article class="card reveal">
             <p class="card-tag">Open-source contribution · Nov 2026</p>
-            <h3>Wallpaper Rotator for GNOME</h3>
+            <h4>Wallpaper Rotator for GNOME</h4>
             <p>A fork of Andrew Zaech's Wallpaper Slideshow, a GNOME Shell extension, with four opt-in features. Each one is also on its own branch based on the original, offered to its author for review.</p>
             <dl class="spec">
               <div><dt>Added</dt><dd>Background colors taken from the wallpaper's edges · keep image adjustment · include subfolders · panel icon</dd></div>
@@ -843,7 +864,6 @@
               <a href="https://gitlab.com/AndrewZaech/azwallpaper" target="_blank" rel="noopener">Original project ↗</a>
             </p>
           </article>
-
         </div>
       </div>
     </section>
@@ -877,7 +897,7 @@
           <article class="ai-card reveal">
             <span class="p-id">A-03</span>
             <h3>AI-assisted software engineering</h3>
-            <p>Claude Code, GitHub Copilot, Cursor, Codex and MCP as accelerators, inside a discipline I turned into tooling (<a href="#projects">vibe-engineering</a>, now in beta):</p>
+            <p>Claude Code, GitHub Copilot, Cursor, Codex and MCP as accelerators, inside a discipline I turned into tooling (<a href="#vibe-engineering">vibe-engineering</a>, now in beta):</p>
             <ul class="ai-rules">
               <li>Specs first, work decomposed into small tasks</li>
               <li>Architecture decisions made by me</li>
@@ -902,15 +922,15 @@
         <dl class="bom reveal">
           <div class="bom-row">
             <dt>Backend <span class="tier tier-primary">primary</span></dt>
-            <dd><ul class="chips"><li class="core">C# <span class="yrs">15+ yrs</span></li><li class="core">.NET <span class="yrs">15+ yrs</span></li><li class="core">ASP.NET Core <span class="yrs">12 yrs</span></li><li class="core">EF Core <span class="yrs">5 yrs</span></li><li class="core">REST APIs <span class="yrs">5 yrs</span></li><li class="core">MassTransit <span class="yrs">5 yrs</span></li></ul></dd>
+            <dd><ul class="chips"><li class="core">C# <span class="yrs">15+ yrs</span></li><li class="core">.NET <span class="yrs">15+ yrs</span></li><li class="core">ASP.NET <span class="yrs">12 yrs</span></li><li class="core">ASP.NET Core</li><li class="core">EF Core <span class="yrs">5 yrs</span></li><li class="core">REST APIs <span class="yrs">5 yrs</span></li><li class="core">MassTransit <span class="yrs">5 yrs</span></li></ul></dd>
           </div>
           <div class="bom-row">
             <dt>Architecture <span class="tier tier-primary">primary</span></dt>
-            <dd><ul class="chips"><li class="core">Distributed systems <span class="yrs">5 yrs</span></li><li class="core">Microservices <span class="yrs">5 yrs</span></li><li class="core">DDD</li><li class="core">Event-driven</li><li>Strangler Fig</li><li>Vertical Slice</li><li>Hexagonal</li><li>Clean Architecture</li><li>Modular monolith</li><li>CQRS</li><li>Saga</li><li>RFC</li><li>ADR</li></ul></dd>
+            <dd><ul class="chips"><li class="core">Distributed systems</li><li class="core">Microservices <span class="yrs">5 yrs</span></li><li class="core">DDD</li><li class="core">Event-driven</li><li>Strangler Fig</li><li>Vertical Slice</li><li>Hexagonal</li><li>Clean Architecture</li><li>Modular monolith</li><li>CQRS</li><li>Saga</li><li>RFC</li><li>ADR</li></ul></dd>
           </div>
           <div class="bom-row">
             <dt>Cloud &amp; platform</dt>
-            <dd><ul class="chips"><li class="core">AWS <span class="yrs">5 yrs</span></li><li class="core">EKS <span class="yrs">5 yrs</span></li><li class="core">Kubernetes <span class="yrs">5 yrs</span></li><li class="core">Docker <span class="yrs">5 yrs</span></li><li>Helm</li><li>Terraform</li><li>Linux</li><li>GitLab CI</li><li>GitHub Actions</li></ul></dd>
+            <dd><ul class="chips"><li class="core">AWS <span class="yrs">5 yrs</span></li><li class="core">EKS</li><li class="core">Kubernetes <span class="yrs">5 yrs</span></li><li class="core">Docker <span class="yrs">5 yrs</span></li><li>Helm</li><li>Terraform</li><li>Linux</li><li>GitLab CI</li><li>GitHub Actions</li></ul></dd>
           </div>
           <div class="bom-row">
             <dt>Messaging &amp; integration</dt>
@@ -922,7 +942,7 @@
           </div>
           <div class="bom-row">
             <dt>Observability &amp; quality</dt>
-            <dd><ul class="chips"><li class="core">Elastic APM <span class="yrs">5 yrs</span></li><li>Elasticsearch</li><li>Kibana</li><li class="core">Grafana</li><li>OpenTelemetry</li><li>New Relic</li><li class="core">xUnit</li><li>Testcontainers</li><li>Robot Framework <span class="yrs">4 yrs</span></li><li>SonarCloud</li><li>CodeQL</li></ul></dd>
+            <dd><ul class="chips"><li class="core">Elastic APM</li><li>Elasticsearch <span class="yrs">5 yrs</span></li><li>Kibana</li><li class="core">Grafana</li><li>OpenTelemetry</li><li>New Relic</li><li class="core">xUnit</li><li>Testcontainers</li><li>Robot Framework <span class="yrs">4 yrs</span></li><li>SonarCloud</li><li>CodeQL</li></ul></dd>
           </div>
           <div class="bom-row">
             <dt>Security &amp; identity</dt>
@@ -957,36 +977,28 @@
 
         <div class="posts">
           <article class="post reveal">
-            <a href="https://www.linkedin.com/posts/gelonezi_innovation-softwareengineering-technologyforgood-share-7524145908104556545-Rabp/" target="_blank" rel="noopener">
-              <p class="post-meta"><time datetime="2026-10">Oct 2026</time> · LinkedIn</p>
-              <h3>Our team won Ideathon Lençóis Paulista</h3>
-              <p>First place with “Cidade em Dia”, a solution concept for a real problem in our city, built with a team of very different backgrounds. Technology earns its value when it solves concrete problems; the prize is consulting support to take the concept further.</p>
-              <ul class="chips"><li>Technology for good</li><li>Innovation</li></ul>
-            </a>
+            <p class="post-meta"><time datetime="2026-10">Oct 2026</time> · LinkedIn</p>
+            <h3><a href="https://www.linkedin.com/posts/gelonezi_innovation-softwareengineering-technologyforgood-share-7524145908104556545-Rabp/" target="_blank" rel="noopener">Our team won Ideathon Lençóis Paulista</a></h3>
+            <p>First place with “Cidade em Dia”, a solution concept for a real problem in our city, built with a team of very different backgrounds. Technology earns its value when it solves concrete problems; the prize is consulting support to take the concept further.</p>
+            <ul class="chips"><li>Technology for good</li><li>Innovation</li></ul>
           </article>
           <article class="post reveal">
-            <a href="https://www.linkedin.com/in/gelonezi/recent-activity/all/" target="_blank" rel="noopener">
-              <p class="post-meta"><time datetime="2026-10">Oct 2026</time> · LinkedIn</p>
-              <h3>The job descriptions didn't get easier. I grew.</h3>
-              <p>In 2020 a Staff Engineer job description looked like a hiring plan for a whole team. Today I read the same lists and think: done that, worked with that, and I can bring more.</p>
-              <ul class="chips"><li>Staff engineering</li><li>Career growth</li></ul>
-            </a>
+            <p class="post-meta"><time datetime="2026-10">Oct 2026</time> · LinkedIn</p>
+            <h3><a href="https://www.linkedin.com/in/gelonezi/recent-activity/all/" target="_blank" rel="noopener">The job descriptions didn't get easier. I grew.</a></h3>
+            <p>In 2020 a Staff Engineer job description looked like a hiring plan for a whole team. Today I read the same lists and think: done that, worked with that, and I can bring more.</p>
+            <ul class="chips"><li>Staff engineering</li><li>Career growth</li></ul>
           </article>
           <article class="post reveal">
-            <a href="https://www.linkedin.com/in/gelonezi/recent-activity/all/" target="_blank" rel="noopener">
-              <p class="post-meta"><time datetime="2026-05">May 2026</time> · LinkedIn</p>
-              <h3>Learning the Saga pattern in a weekend</h3>
-              <p>Implementing Saga with MassTransit in C# for about $30 in tokens. My rule: make the AI report what it did and why, like a teacher, so you learn the architecture and not just the prompts.</p>
-              <ul class="chips"><li>Saga</li><li>MassTransit</li><li>Engineering judgment</li></ul>
-            </a>
+            <p class="post-meta"><time datetime="2026-05">May 2026</time> · LinkedIn</p>
+            <h3><a href="https://www.linkedin.com/in/gelonezi/recent-activity/all/" target="_blank" rel="noopener">Learning the Saga pattern in a weekend</a></h3>
+            <p>Implementing Saga with MassTransit in C# for about $30 in tokens. My rule: make the AI report what it did and why, like a teacher, so you learn the architecture and not just the prompts.</p>
+            <ul class="chips"><li>Saga</li><li>MassTransit</li><li>Engineering judgment</li></ul>
           </article>
           <article class="post reveal">
-            <a href="https://www.linkedin.com/in/gelonezi/recent-activity/all/" target="_blank" rel="noopener">
-              <p class="post-meta"><time datetime="2026-05">May 2026</time> · LinkedIn</p>
-              <h3>From Windsurf to Claude Code</h3>
-              <p>Why I switched AI coding tools after a year, and the night I sketched a feature at the gym and came home to find it built.</p>
-              <ul class="chips"><li>AI-assisted engineering</li><li>Developer tooling</li></ul>
-            </a>
+            <p class="post-meta"><time datetime="2026-05">May 2026</time> · LinkedIn</p>
+            <h3><a href="https://www.linkedin.com/in/gelonezi/recent-activity/all/" target="_blank" rel="noopener">From Windsurf to Claude Code</a></h3>
+            <p>Why I switched AI coding tools after a year, and the night I sketched a feature at the gym and came home to find it built.</p>
+            <ul class="chips"><li>AI-assisted engineering</li><li>Developer tooling</li></ul>
           </article>
         </div>
         <p class="more reveal"><a href="https://www.linkedin.com/in/gelonezi/recent-activity/all/" target="_blank" rel="noopener">All posts on LinkedIn ↗</a></p>
@@ -1065,17 +1077,17 @@
             full-time employee or B2B contractor. LinkedIn is the fastest way to reach me; my contact details are open to recruiters there.
           </p>
           <div class="cta-row">
-            <a class="btn btn-primary btn-lg" href="https://www.linkedin.com/in/gelonezi/" target="_blank" rel="noopener">
+            <a class="btn btn-primary btn-lg" href="https://www.linkedin.com/in/gelonezi/" target="_blank" rel="me noopener">
               <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
               Message me on LinkedIn
             </a>
             <a class="btn btn-ghost btn-lg" href="resume.html">View résumé</a>
           </div>
           <ul class="social" aria-label="Elsewhere">
-            <li><a href="https://github.com/gelonezi" target="_blank" rel="noopener">
+            <li><a href="https://github.com/gelonezi" target="_blank" rel="me noopener">
               <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 0-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.3-3.1-.2-.4-.6-1.6 0-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.6 1.6.2 2.8.1 3.2.8.8 1.3 1.9 1.3 3.1 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></svg>
               github.com/gelonezi</a></li>
-            <li><a href="https://www.youtube.com/@rgelonezi" target="_blank" rel="noopener">
+            <li><a href="https://www.youtube.com/@rgelonezi" target="_blank" rel="me noopener">
               <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>
               youtube.com/@rgelonezi</a></li>
           </ul>
